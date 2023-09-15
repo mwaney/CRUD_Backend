@@ -34,15 +34,15 @@ router.get("/:id", async (req, res) => {
     console.log("Get Person Error: ", error.message);
   }
 });
-router.get("/", async (req, res) => {
-  try {
-    const person = await Person.find();
-    res.status(200).send(person);
-  } catch (error) {
-    res.status(400).send("Can't get Person");
-    console.log("Error getting People", error.message);
-  }
-});
+// router.get("/", async (req, res) => {
+//   try {
+//     const person = await Person.find();
+//     res.status(200).send(person);
+//   } catch (error) {
+//     res.status(400).send("Can't get Person");
+//     console.log("Error getting People", error.message);
+//   }
+// });
 
 // Update a person by user_id
 router.put("/:id", async (req, res) => {
