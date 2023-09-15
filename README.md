@@ -86,7 +86,7 @@ Your API will be available at **http://localhost:3000** by default (adjust the p
 
 ### Read a Person
 
-- **EndPoint: /api/:id**
+- **EndPoint: /api/:user_id**
 - **Method**: GET
 - **Response:**
 
@@ -101,7 +101,7 @@ Your API will be available at **http://localhost:3000** by default (adjust the p
 
 ### Update a Person
 
-- **EndPoint: /api/:id**
+- **EndPoint: /api/:user_id**
 - **Method**: PUT
 - **Request Body: **
 
@@ -124,13 +124,13 @@ Your API will be available at **http://localhost:3000** by default (adjust the p
 
   ### Delete a Person
 
-- **EndPoint: /api/:id**
+- **EndPoint: /api/:user_id**
 - **Method**: DELETE
 - **Response:**
 
   ```bash
   {
-    ""_id": "1234567876",
+    "_id": "1234567876",
     "name": [
       "Jane Doe"
     ]"

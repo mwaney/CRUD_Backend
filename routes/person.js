@@ -23,7 +23,7 @@ router.post("/", async (req, res) => {
 });
 
 // Read a person by user_id
-router.get("/:id", async (req, res) => {
+router.get("/:user_id", async (req, res) => {
   try {
     const person = await Person.findById(req.params.id);
     if (!person) return res.status(400).send("Person doesn't exist");
@@ -45,7 +45,7 @@ router.get("/:id", async (req, res) => {
 // });
 
 // Update a person by user_id
-router.put("/:id", async (req, res) => {
+router.put("/:user_id", async (req, res) => {
   try {
     const person = await Person.findById(req.params.id);
     if (!person) return res.status(404).send("Person doesn't exist");
@@ -64,7 +64,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:user_id", async (req, res) => {
   try {
     const person = await Person.findById(req.params.id);
     if (!person) return res.status(400).send("Person doesn't exist");
